@@ -32,7 +32,10 @@ def ScrapeObjects(objs, deep_copy = False):
 
 
 	chromedriver_autoinstaller.install() # check if chromedriver is installed correctly and on path
-	driver = webdriver.Chrome()
+	chrome_options = webdriver.ChromeOptions()
+	chrome_options.add_experimental_option('prefs', {'profile.default_content_setting_values.cookies': 2})
+
+	driver = webdriver.Chrome(options = chrome_options)
 	driver.maximize_window()
 
 	# modifies the objects in-place
