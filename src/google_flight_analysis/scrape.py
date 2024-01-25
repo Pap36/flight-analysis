@@ -413,9 +413,9 @@ class _Scrape:
 		mid_start = res2.index("Price insights")
 		mid_end = -1
 		try:
-		    mid_end = res2.index("Other departing flights")+1
+			mid_end = res2.index("Other departing flights")+1
 		except:
-		    mid_end = res2.index("Other flights")+1
+			mid_end = res2.index("Other flights")+1
 		end  = [i for i, x in enumerate(res2) if x.endswith('more flights')][0]
 
 		res3 = res2[start:mid_start] + res2[mid_end:end]
