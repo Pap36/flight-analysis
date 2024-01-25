@@ -12,6 +12,8 @@ cached/
 flight_analysis_app/
 docs/
 
+.DS_Store
+
 .pytest_cache/
 deprecated_src/
 
